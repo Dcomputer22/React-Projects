@@ -1,0 +1,21 @@
+.tree-view-wrapper {
+    background-color: rgb(88, 21, 88);
+    color: #ffffff;
+    height: 100vh;
+    width: 25vw;
+
+    .menu-list-wrapper {
+        list-style: none;
+
+        .menu-item-wrapper {
+            font-size: 18px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            &_content {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
