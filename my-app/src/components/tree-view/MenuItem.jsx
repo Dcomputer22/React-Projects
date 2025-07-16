@@ -1,7 +1,7 @@
-import { useState } from "react";
-import MenuList from "./MenuList";
-import { FaPlus } from "react-icons/fa";
-import { FaMinus } from "react-icons/fa";
+import { useState } from 'react';
+import MenuList from './MenuList';
+import { FaPlus } from 'react-icons/fa';
+import { FaMinus } from 'react-icons/fa';
 
 const MenuItem = ({ item }) => {
   const [showCurrentChildren, setShowCurrentChildren] = useState({});
@@ -12,15 +12,18 @@ const MenuItem = ({ item }) => {
       [getCurrentLabel]: !showCurrentChildren[getCurrentLabel],
     });
   };
-  console.log(showCurrentChildren);
 
   return (
-    <li className={"menu-item-wrapper"}>
-      <div className={"menu-item-wrapper_content"}>
+    <li className={'menu-item-wrapper'}>
+      <div className={'menu-item-wrapper_content'}>
         <p>{item.label}</p>
         {item && item.children && item.children.length > 0 ? (
           <span onClick={() => handleToggleChildren(item.label)}>
-            {showCurrentChildren[item.label] ? <FaMinus size={"25px"} /> : <FaPlus size={"25px"} />}
+            {showCurrentChildren[item.label] ? (
+              <FaMinus size={'25px'} />
+            ) : (
+              <FaPlus size={'25px'} />
+            )}
           </span>
         ) : null}
       </div>
